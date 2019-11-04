@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,16 +11,16 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Object Start");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveVertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-        float moveHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
- 
-        player.transform.Translate(moveHorizontal, moveVertical, 0);
-        mainCamera.transform.Translate(moveHorizontal, moveVertical, 0);
+        float rotateVertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        float rotateHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        float thrust = Input.GetAxis("Thrust") * Time.deltaTime * speed;
+
+        player.transform.Translate(0, 0, thrust);
+        //mainCamera.transform.Translate(moveHorizontal, moveVertical, thrust);
     }
 }

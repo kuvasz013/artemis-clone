@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Spaceflight Controls/Scenes/Example 1.unity
+    guid: e897aa91a21d9e7458b575f50589f41f
   m_configObjects: {}
