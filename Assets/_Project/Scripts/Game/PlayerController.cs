@@ -70,12 +70,12 @@ public class PlayerController : MonoBehaviour
  
  
         //and finally rotate.  
-        //transform.GetChild(0).Rotate(angVel * Time.fixedDeltaTime);
+        transform.GetChild(0).Rotate(angVel * Time.fixedDeltaTime);
  
         //this limits your rotation, as well as gradually realigns you.  It's a little convoluted, but it's
         //got the same square magnitude functionality as the angular velocity, plus a constant since x^2
         //is very small when x is small.  Also realigns faster based on speed.  feel free to tweak
-        //transform.GetChild(0).Rotate(-shipRot.normalized * .015f * (shipRot.sqrMagnitude + 500) * (1 + speed / maxSpeed) * Time.fixedDeltaTime);
+        transform.GetChild(0).Rotate(-shipRot.normalized * .015f * (shipRot.sqrMagnitude + 500) * (1 + speed / maxSpeed) * Time.fixedDeltaTime);
  
  
         //LINEAR DYNAMICS//
@@ -95,8 +95,8 @@ public class PlayerController : MonoBehaviour
  
         //if not accelerating or decelerating, tend toward cruise, using a similar principle to the accelerations above
         //(added clamping since it's more of a gradual slowdown/speedup)
-        else if (Mathf.Abs(deltaSpeed) > .1f)
-            speed -= Mathf.Clamp(deltaSpeed * Mathf.Abs(deltaSpeed), -30, 100) * Time.fixedDeltaTime;
+        /*else if (Mathf.Abs(deltaSpeed) > .1f)
+            speed -= Mathf.Clamp(deltaSpeed * Mathf.Abs(deltaSpeed), -30, 100) * Time.fixedDeltaTime;*/
  
  
         //moves camera (make sure you're GetChild()ing the camera's index)
@@ -104,8 +104,8 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(1).localPosition = cameraOffset + new Vector3(0, 0, -deltaSpeed * .02f);
  
  
-        float sqrOffset = transform.GetChild(1).localPosition.sqrMagnitude;
-        Vector3 offsetDir = transform.GetChild(1).localPosition.normalized;
+        float sqrOffset = transform.GetChild(0).localPosition.sqrMagnitude;
+        Vector3 offsetDir = transform.GetChild(0).localPosition.normalized;
  
  
         //this takes care of realigning after collisions, where the ship gets displaced due to its rigidbody.
