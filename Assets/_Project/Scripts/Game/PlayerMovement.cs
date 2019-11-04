@@ -11,8 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 cameraOffset;
     private float speed;
     public float maxSpeed;
-    public Rigidbody rb;
-    
+
     // --- temporary ---
     public Text text;
 
@@ -51,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
         // CAMERA UPDATE
 
-        transform.GetChild(0).localPosition = cameraOffset;
+        transform.GetChild(0).GetChild(0).localPosition = cameraOffset;
 
         // TEXT UPDATE
         text.text = "Speed: " + Mathf.RoundToInt(speed);
