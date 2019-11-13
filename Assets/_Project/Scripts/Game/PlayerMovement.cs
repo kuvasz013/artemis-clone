@@ -9,12 +9,18 @@ public class PlayerMovement : MonoBehaviour
     public float maneuvering;
     public float thrust;
     public Vector3 cameraOffset;
+    private Camera mainCamera;
     private float speed;
     public float maxSpeed;
 
     // --- temporary ---
     public Text text;
 
+
+    void Start() {
+        Cursor.visible = true;
+        mainCamera = Camera.main;
+    }
     void FixedUpdate()
     {
         // ANGULAR DYNAMICS
@@ -50,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         // CAMERA UPDATE
 
-        transform.GetChild(0).GetChild(0).localPosition = cameraOffset;
+        mainCamera.transform.localPosition = cameraOffset;
 
         // TEXT UPDATE
         text.text = "Speed: " + Mathf.RoundToInt(speed);

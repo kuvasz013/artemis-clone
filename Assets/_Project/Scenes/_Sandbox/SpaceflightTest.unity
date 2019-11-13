@@ -621,79 +621,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &601834829
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1798355732}
-    m_Modifications:
-    - target: {fileID: 101088, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_Name
-      value: CruiseFighter (Shiny Red)
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 52.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.26855665
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.23689695
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.019389717
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.93347806
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -29.485
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -31.335001
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 10.8220005
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 152724, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9f70ef996a4dad34e80b3763fcbc39f9, type: 3}
+--- !u!4 &601389455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3463207661980900655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &713774553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1142,7 +1075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2101562188}
-  - {fileID: 1991059390}
+  - {fileID: 601389455}
   m_Father: {fileID: 1105562420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1220,12 +1153,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2791469361703475585, guid: 74b669da1e0b4dd43ac8f5a4cb729073,
     type: 3}
   m_PrefabInstance: {fileID: 1821339107}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1991059390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 474306, guid: 9f70ef996a4dad34e80b3763fcbc39f9,
-    type: 3}
-  m_PrefabInstance: {fileID: 601834829}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035528139
 GameObject:
@@ -1333,6 +1260,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 986d1bbb59560d141a8010e9143bec99, type: 3}
+--- !u!1001 &3463207661980900655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1798355732}
+    m_Modifications:
+    - target: {fileID: 3463207662455788162, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_Name
+      value: CruiseFighter (Shiny Red)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.26855665
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.23689695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.019389717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93347806
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -29.485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -31.335001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463207662455366816, guid: e37bf8abbc26e034580567a785dc7b0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.8220005
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e37bf8abbc26e034580567a785dc7b0a, type: 3}
 --- !u!4 &8137553126200967426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7403869735128714342, guid: 986d1bbb59560d141a8010e9143bec99,
