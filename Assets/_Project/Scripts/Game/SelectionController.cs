@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectionController : MonoBehaviour
 {
 
-    Camera mainCamera;
+    private Camera mainCamera;
+    private GameObject currentTarget;
+    public Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +23,17 @@ public class SelectionController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.gameObject.tag == "Selectable") {
-                    Debug.Log("kaki");
+                if (hit.transform.gameObject.tag == "Selectable")
+                {
+                    currentTarget = hit.transform.gameObject;
+                    text.text = "Currently Selected: " + currentTarget.GetComponent<ObjectController>().callSign;
                 }
             }
         }
+    }
+
+    GameObject getCurrentTarget() 
+    {
+        return currentTarget;
     }
 }
