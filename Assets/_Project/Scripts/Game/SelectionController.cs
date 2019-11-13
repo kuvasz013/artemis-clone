@@ -17,7 +17,7 @@ public class SelectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -32,7 +32,7 @@ public class SelectionController : MonoBehaviour
         }
     }
 
-    GameObject getCurrentTarget() 
+    public GameObject GetCurrentTarget() 
     {
         return currentTarget;
     }
