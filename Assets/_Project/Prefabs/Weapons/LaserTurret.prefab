@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe46830552dc70478e28dc60c9aac40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   projectile: {fileID: 634005221539438235, guid: 2e9eeb176665bfe4789a9c43d0b9288f,
     type: 3}
+  burstCount: 5
+  burstInterval: 0.2

@@ -22,15 +22,23 @@ public class SelectionController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.gameObject.tag == "Selectable")
+                GameObject target = hit.transform.gameObject;
+                if (target.tag == "Selectable")
                 {
-                    currentTarget = hit.transform.gameObject;
+                    if (target.GetComponent<Shields>() != null)
+                    {
+                        currentTarget = hit.transform.parent.gameObject;
+                    }
+                    else
+                    {
+                        currentTarget = hit.transform.gameObject;
+                    }
                 }
             }
         }
     }
 
-    public GameObject GetCurrentTarget() 
+    public GameObject GetCurrentTarget()
     {
         return currentTarget;
     }

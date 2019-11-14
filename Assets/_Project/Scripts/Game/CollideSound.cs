@@ -12,7 +12,6 @@ public class CollideSound : MonoBehaviour
 
     void OnCollisionEnter()
     {
-        Debug.Log("collision");
         GetComponent<AudioSource>().Play();
     }
 }

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 3462963909279795785}
   - component: {fileID: 8046837225682695462}
   - component: {fileID: 7707126636836521976}
+  - component: {fileID: 3924332359628947131}
   m_Layer: 0
   m_Name: TurretProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 634005221539438235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.01, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,7 +120,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -161,3 +162,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3924332359628947131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634005221539438235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fa58c7aaafe50439f46314c3c86695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 10
+  damageType: 0

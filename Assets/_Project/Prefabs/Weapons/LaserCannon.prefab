@@ -142,8 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  startWidth: 0
-  endWidth: 0
+  startWidth: 0.2
+  endWidth: 0.2
+  shotDuration: 2
 --- !u!108 &108727036293558626
 Light:
   m_ObjectHideFlags: 0

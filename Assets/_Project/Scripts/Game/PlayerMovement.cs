@@ -53,8 +53,8 @@ public class PlayerMovement : MonoBehaviour
         else if (speed <= 0)
         {
             speed = 0;
-            rb.velocity = rb.velocity * .99f;
-            rb.angularVelocity = rb.angularVelocity * .99f;
+            rb.velocity = rb.velocity * .9f;
+            rb.angularVelocity = rb.angularVelocity * .9f;
         }
 
         transform.Translate(transform.forward * speed * Time.fixedDeltaTime, Space.World);

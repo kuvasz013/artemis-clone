@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2389398280400339426}
   - component: {fileID: 8175376364006591113}
   - component: {fileID: 6707242438840990067}
+  - component: {fileID: 114720918813197256}
+  - component: {fileID: 114601163172801574}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Untagged
@@ -220,3 +222,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114720918813197256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791469361703896481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 0.4
+--- !u!114 &114601163172801574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791469361703896481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246fb3dbef67dc94d89f5772c662ee28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMuliplier: 2
+  damageType: 0
