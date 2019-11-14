@@ -6,7 +6,6 @@ public class CombatController : MonoBehaviour
 {
     private SelectionController selection;
     public GameObject laserCannon;
-    public GameObject laserTurret;
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +25,6 @@ public class CombatController : MonoBehaviour
                         selection.GetCurrentTarget().transform));
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (selection.GetCurrentTarget() != null)
-            {
-                StartCoroutine(
-                    RenderTurret(
-                        selection.GetCurrentTarget().transform));
-            }
-        }
     }
 
     IEnumerator RenderCannon(Transform target)
@@ -44,18 +33,6 @@ public class CombatController : MonoBehaviour
         laserInstance.GetComponent<AudioSource>().Play();
 
         LaserCannon laserScript = laserInstance.GetComponent<LaserCannon>();
-        laserScript.startPoint = transform;
-        laserScript.endPoint = target;
-        yield return new WaitForSeconds(2);
-        Destroy(laserInstance);
-    }
-
-    IEnumerator RenderTurret(Transform target)
-    {
-        GameObject laserInstance = (GameObject)Instantiate(laserTurret, transform.position, transform.rotation);
-        laserInstance.GetComponent<AudioSource>().Play();
-
-        LaserTurret laserScript = laserInstance.GetComponent<LaserTurret>();
         laserScript.startPoint = transform;
         laserScript.endPoint = target;
         yield return new WaitForSeconds(2);

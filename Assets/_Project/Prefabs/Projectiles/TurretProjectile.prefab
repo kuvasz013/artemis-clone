@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2612721951240319721}
   - component: {fileID: 5510989056108914016}
   - component: {fileID: 8355405199870598882}
+  - component: {fileID: 3409033921820902809}
+  - component: {fileID: 1460708848210698265}
   m_Layer: 0
   m_Name: TurretProjectile
   m_TagString: Untagged
@@ -116,3 +118,31 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!54 &3409033921820902809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634005221539438235}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1460708848210698265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634005221539438235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66bfd0a80632aa4397bd87636f9afe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
