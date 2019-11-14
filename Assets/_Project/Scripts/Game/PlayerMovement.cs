@@ -12,13 +12,16 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed;
     private Rigidbody rb;
     private PulseController pulseController;
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode;
+    public Vector2 hotSpot = Vector2.zero;
 
-    // --- temporary ---
-    public Text text;
 
-
-    void Start() {
+    void Start()
+    {
         Cursor.visible = true;
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody>();
         pulseController = GetComponentInChildren<PulseController>();
@@ -41,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         // LINEAR DYNAMICS
 
         float acceleration = Input.GetAxis("Thrust");
-        speed += acceleration * Mathf.Abs(acceleration) * thrust * Time.fixedDeltaTime;;
+        speed += acceleration * Mathf.Abs(acceleration) * thrust * Time.fixedDeltaTime; ;
 
         if (speed >= maxSpeed)
         {
@@ -61,9 +64,10 @@ public class PlayerMovement : MonoBehaviour
 
         mainCamera.transform.localPosition = cameraOffset;
         pulseController.HandleExhaust(acceleration);
+    }
 
-        // TEXT UPDATE
-        text.text = "Speed: " + Mathf.RoundToInt(speed);
-
+    void OnApplicationQuit()
+    {
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 }

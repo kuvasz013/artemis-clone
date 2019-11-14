@@ -6,7 +6,6 @@ public class SelectionController : MonoBehaviour
 
     private Camera mainCamera;
     private GameObject currentTarget;
-    public Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +25,6 @@ public class SelectionController : MonoBehaviour
                 if (hit.transform.gameObject.tag == "Selectable")
                 {
                     currentTarget = hit.transform.gameObject;
-                    text.text = "Currently Selected: " + currentTarget.GetComponent<ObjectController>().callSign;
                 }
             }
         }

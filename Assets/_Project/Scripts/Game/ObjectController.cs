@@ -12,8 +12,8 @@ public class ObjectController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        transform.Translate(transform.forward * Time.deltaTime * 2, Space.World);
     }
 }

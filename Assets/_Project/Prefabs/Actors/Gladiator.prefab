@@ -303,6 +303,9 @@ MonoBehaviour:
   thrust: 2
   cameraOffset: {x: 0, y: 100, z: -400}
   maxSpeed: 6
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   text: {fileID: 0}
 --- !u!114 &114431810041020570
 MonoBehaviour:
@@ -316,7 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e3aecb83c1280499aabd52d770bf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!114 &351945620366162217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bee5378b4d70b43bba02b52c18037a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 0}
+  laserCannon: {fileID: 0}
+  laserTurret: {fileID: 0}
 --- !u!33 &5938943973401601774
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -347,7 +350,7 @@ MeshCollider:
   m_GameObject: {fileID: 4328682745446194413}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14

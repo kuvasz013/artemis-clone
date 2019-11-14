@@ -6,19 +6,20 @@ public class LaserTurret : MonoBehaviour
 {
     public Transform startPoint;
     public Transform endPoint;
-    ParticleSystem emitter;
+    private GameObject laserRay;
+    private Vector3 relativePos;
 
     // Start is called before the first frame update
     void Start()
     {
-        emitter = GetComponent<ParticleSystem>();
-        Vector3 relativePos = endPoint.position - startPoint.position;
-        emitter.transform.position = startPoint.position;
-        emitter.transform.rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        laserRay = transform.GetChild(0).gameObject;
+        relativePos = endPoint.position - startPoint.position;
+        transform.rotation = Quaternion.LookRotation(relativePos, Vector3.up);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        laserRay.transform.Translate(transform.forward * Time.deltaTime * 10, Space.World);
     }
 }

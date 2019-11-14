@@ -52,7 +52,7 @@ public class CombatController : MonoBehaviour
 
     IEnumerator RenderTurret(Transform target)
     {
-        GameObject laserInstance = (GameObject)Instantiate(laserTurret);
+        GameObject laserInstance = (GameObject)Instantiate(laserTurret, transform.position, transform.rotation);
         laserInstance.GetComponent<AudioSource>().Play();
 
         LaserTurret laserScript = laserInstance.GetComponent<LaserTurret>();
