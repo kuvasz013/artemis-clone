@@ -4,22 +4,44 @@ using UnityEngine;
 
 public class LaserCannon : MonoBehaviour
 {
-    public Transform startPoint;
-    public Transform endPoint;
-    LineRenderer laserLine;
+    private SelectionController selection;
+    private AudioSource audioSource;
+    private Light lightSource;
+    public GameObject projectile;
+    public float startWidth, endWidth;
 
     // Start is called before the first frame update
     void Start()
     {
-        laserLine = GetComponent<LineRenderer>();
-        laserLine.startWidth = .2f;
-        laserLine.endWidth = .2f;   
+        selection = GetComponentInParent<SelectionController>();
+        audioSource = GetComponent<AudioSource>();
+        lightSource = GetComponent<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        laserLine.SetPosition(0, startPoint.position);
-        laserLine.SetPosition(1, endPoint.position);
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (selection.GetCurrentTarget() != null)
+            {
+                audioSource.Play();
+                lightSource.enabled = true;
+
+                GameObject instance = (GameObject)Instantiate(projectile, transform.position, Quaternion.identity);
+
+                instance.transform.SetParent(transform);
+                instance.GetComponent<LineRenderController>().SetWidth(startWidth, endWidth);
+                instance.GetComponent<LineRenderController>().SetSelection(selection);
+                StartCoroutine(LineDestroyer(instance));
+            }
+        }
+    }
+
+    IEnumerator LineDestroyer(GameObject instance)
+    {   
+        yield return new WaitForSeconds(2);
+        lightSource.enabled = false;
+        Destroy(instance);
     }
 }

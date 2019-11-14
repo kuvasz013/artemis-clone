@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class LaserTurret : MonoBehaviour
 {
-    public Transform target;
     public GameObject projectile;
     private SelectionController selection;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         selection = GetComponentInParent<SelectionController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -20,12 +21,11 @@ public class LaserTurret : MonoBehaviour
         {
             if (selection.GetCurrentTarget() != null)
             {
-                GetComponent<AudioSource>().Play();
+                audioSource.Play();
 
-                target = selection.GetCurrentTarget().transform;
-                GameObject instance = (GameObject)Instantiate(projectile);
-                instance.transform.position = transform.position;
-                instance.GetComponent<ProjectileController>().direction = target.position - transform.position;
+                Transform target = selection.GetCurrentTarget().transform;
+                Quaternion rotation = Quaternion.LookRotation((target.position - transform.position), Vector3.forward);
+                GameObject instance = (GameObject)Instantiate(projectile, transform.position, rotation);
             }
         }
     }

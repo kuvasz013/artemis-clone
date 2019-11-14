@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    public Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +12,12 @@ public class ProjectileController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(direction * Time.fixedDeltaTime, Space.World);
+        transform.Translate(transform.forward * Time.fixedDeltaTime * 40, Space.World);
+    }
+
+    void OnTriggerEnter()
+    {
+        Destroy(gameObject, 0);
+        Debug.Log("Laser destroyed");
     }
 }
