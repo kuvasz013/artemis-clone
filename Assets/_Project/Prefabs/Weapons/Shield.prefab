@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015802797646271461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 0
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMuliplier: 3
   damageType: 0
+  maxDamage: 80
 --- !u!136 &4309606583304935624
 CapsuleCollider:
   m_ObjectHideFlags: 0

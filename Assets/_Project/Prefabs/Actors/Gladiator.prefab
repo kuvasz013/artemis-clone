@@ -393,8 +393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246fb3dbef67dc94d89f5772c662ee28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageMuliplier: 1
+  damageMuliplier: 20
   damageType: 0
+  maxDamage: 80
 --- !u!54 &3094264141168255720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -403,7 +404,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4328682745446194413}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.2
   m_UseGravity: 0
@@ -782,11 +783,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1052553732900740506, guid: 030d66bd9b5cbfc41a88a7ad0f95afbd,
-        type: 3}
-      propertyPath: burstCount
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 030d66bd9b5cbfc41a88a7ad0f95afbd, type: 3}
 --- !u!4 &3120259128876662230 stripped
@@ -877,11 +873,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1052553732900740506, guid: 030d66bd9b5cbfc41a88a7ad0f95afbd,
-        type: 3}
-      propertyPath: burstCount
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 030d66bd9b5cbfc41a88a7ad0f95afbd, type: 3}
 --- !u!4 &1904541480582555082 stripped
@@ -905,7 +896,7 @@ PrefabInstance:
     - target: {fileID: 1015802797646271461, guid: 7badc894f4e14e84a9192415afcc56bd,
         type: 3}
       propertyPath: m_TagString
-      value: PlayerShield
+      value: Shield
       objectReference: {fileID: 0}
     - target: {fileID: 1015802797646271461, guid: 7badc894f4e14e84a9192415afcc56bd,
         type: 3}

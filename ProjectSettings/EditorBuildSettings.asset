@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Spaceflight Controls/Scenes/Example 1.unity
-    guid: e897aa91a21d9e7458b575f50589f41f
+    path: Assets/_Project/Scenes/_Sandbox/SpaceflightTest.unity
+    guid: ad05a9c8c515f404eb7afc8d33533707
   m_configObjects: {}

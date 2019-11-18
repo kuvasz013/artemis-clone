@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 3966865795338736704}
   - component: {fileID: 82986967801873982}
   - component: {fileID: 114034646946808436}
-  - component: {fileID: 114191443632126098}
   - component: {fileID: 114919726732069820}
   m_Layer: 0
   m_Name: Asteroid1
@@ -46,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3146089483373585451}
-  m_Mesh: {fileID: 4300000, guid: 4fc98ba1e54e0f64aa2c95885ef7026e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d03d0c597bb388947bf16f564153364a, type: 3}
 --- !u!23 &3146089483375590123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +91,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3146089483373585451}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -113,7 +112,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 4fc98ba1e54e0f64aa2c95885ef7026e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a06b7d8123805974182a9aee714fe013, type: 3}
 --- !u!114 &3966865795338736704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,20 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: 0.6
---- !u!114 &114191443632126098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146089483373585451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246fb3dbef67dc94d89f5772c662ee28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageMuliplier: 0
-  damageType: 0
 --- !u!114 &114919726732069820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,5 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246fb3dbef67dc94d89f5772c662ee28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageMuliplier: 2
+  damageMuliplier: 20
   damageType: 0
+  maxDamage: 80

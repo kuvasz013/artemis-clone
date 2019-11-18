@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3216088738444107379}
   - component: {fileID: 82920429082809020}
   - component: {fileID: 1052553732900740506}
+  - component: {fileID: 1318629242139534023}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -144,3 +145,21 @@ MonoBehaviour:
     type: 3}
   burstCount: 5
   burstInterval: 0.2
+  aimingRange: 200
+  flyRange: 100
+  damagePerShot: 3
+  damageType: 0
+--- !u!114 &1318629242139534023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320308262065636593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fa58c7aaafe50439f46314c3c86695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 3
+  damageType: 0

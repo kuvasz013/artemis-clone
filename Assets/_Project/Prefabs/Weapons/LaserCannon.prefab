@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 82920429082809020}
   - component: {fileID: 7275113881821262377}
   - component: {fileID: 108727036293558626}
+  - component: {fileID: 248226718653391152}
   m_Layer: 0
   m_Name: LaserCannon
   m_TagString: Untagged
@@ -141,10 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df84f31ed72c02f4791c74e2477c2a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 634005221539438235, guid: be87ff193ef87574bb66807dd2b7d22e,
+    type: 3}
   startWidth: 0.2
   endWidth: 0.2
   shotDuration: 2
+  damageFractions: 5
 --- !u!108 &108727036293558626
 Light:
   m_ObjectHideFlags: 0
@@ -183,3 +186,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &248226718653391152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320308262065636593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fa58c7aaafe50439f46314c3c86695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerShot: 20
+  damageType: 0
